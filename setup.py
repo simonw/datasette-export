@@ -1,7 +1,7 @@
 from setuptools import setup
 import os
 
-VERSION = "0.1"
+VERSION = "0.1a0"
 
 
 def get_long_description():
@@ -14,7 +14,7 @@ def get_long_description():
 
 setup(
     name="datasette-export",
-    description="Export pages from Datasette to disk",
+    description="Export pages from Datasette to files on disk",
     long_description=get_long_description(),
     long_description_content_type="text/markdown",
     author="Simon Willison",
@@ -27,7 +27,7 @@ setup(
     license="Apache License, Version 2.0",
     classifiers=[
         "Framework :: Datasette",
-        "License :: OSI Approved :: Apache Software License"
+        "License :: OSI Approved :: Apache Software License",
     ],
     version=VERSION,
     packages=["datasette_export"],
