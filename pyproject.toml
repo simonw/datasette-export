@@ -1,0 +1,39 @@
+[project]
+name = "datasette-export"
+version = "0.1a0"
+description = "Export pages from Datasette to files on disk"
+readme = "README.md"
+authors = [{name = "Simon Willison"}]
+license = "Apache-2.0"
+classifiers = [
+    "Framework :: Datasette",
+]
+requires-python = ">=3.10"
+dependencies = [
+    "datasette",
+]
+
+[project.urls]
+Homepage = "https://github.com/simonw/datasette-export"
+Issues = "https://github.com/simonw/datasette-export/issues"
+CI = "https://github.com/simonw/datasette-export/actions"
+Changelog = "https://github.com/simonw/datasette-export/releases"
+
+[project.entry-points.datasette]
+export = "datasette_export"
+
+[dependency-groups]
+dev = [
+    "pytest",
+    "pytest-asyncio",
+]
+
+[build-system]
+requires = ["uv_build>=0.11.0,<0.12.0"]
+build-backend = "uv_build"
+
+[tool.uv.build-backend]
+module-root = ""
+
+[tool.pytest.ini_options]
+asyncio_mode = "strict"
